@@ -1,3 +1,11 @@
+:root {
+    --accent: #F4F4FD;
+    --primary-brand: #4D5AE5;
+    --pressed-state: #404BBF;
+    --white: #ffffff; 
+    --green:rgb(23, 206, 145);
+    }
+
 ul{
     list-style: none;
     margin: 0;
@@ -6,6 +14,7 @@ ul{
 }
 body{
     margin: 0;
+    font-family: "Roboto", sans-serif;
 }
 a{
     text-decoration: none;
@@ -22,7 +31,7 @@ p{
 .header{
     height: 50px;
     width: 100%;
-    background-color: rgb(23, 206, 145);
+    background-color: var(--green);
 }
 
 .container{
@@ -50,11 +59,11 @@ p{
     margin-left: 35px;
     display: flex;
     align-items: center;
-    color: white;
+    color:  var(--white);
     gap: 35px;
 }
 .header-list-item{
-    color: white;
+    color: var(--white);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -63,7 +72,7 @@ p{
 } */
 
 .header-list-item:hover{
-    color: rgb(0, 0, 0);
+    color: black;
 }
 
 .profile-buttons{
@@ -85,29 +94,29 @@ p{
     cursor: pointer;
 }
 .profile:hover{
-    background-color: grey;
+    background-color: var(--accent);
 }
 
 .record{
     height: 24px;
     border-radius: 15px;
-    background-color: rgb(72, 72, 241);
+    background-color: var(--primary-brand);
     border: 0px;
-    color: white;
+    color: var(--white);
     cursor: pointer;
 }
 
 .record:hover{
-    background-color: rgb(51, 51, 201);
+    background-color: var(--pressed-state);
 }
 
 .profile-menu.show{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     width: 150px;
     height: 200px;
-    background-color: white;
+    background-color: var(--white);
     box-shadow: 0 2px 3px 0 #ccd2db;
     /* border: 1px solid black; */
     position: absolute;
@@ -123,16 +132,21 @@ p{
 .profile-settings-link{
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     color: black;
+    height: 100%;
+}
+.profile-settings-link:hover{
+    background-color: var(--accent);
 }
 .svg{
-width: 20px;
-height: 20px;
-display: flex;
-justify-content: center;
-margin-right: 10px;
-fill:  rgb(72, 72, 241);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    fill:  var(--primary-brand);
 }
 .svg-logo{
     width: 40px;
@@ -179,7 +193,7 @@ fill:  rgb(72, 72, 241);
     max-width: 408px;
     height: 100%;
     max-height: 584px;
-    background-color: white;
+    background-color: var(--white);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
   
@@ -206,18 +220,18 @@ fill:  rgb(72, 72, 241);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .modal-close-icon{
+  /* .modal-close-icon{
     width: 8px;
     height: 8px;
     fill: inherit;
-  }
+  } */
   
   .close-modal:hover,
   .close-modal:focus{
     background-color: blueviolet;
   }
   
-  .close-modal:hover .modal-close-icon,
-  .close-modal:focus .modal-close-icon{
-    fill: aqua;
+  .close-modal:hover 
+  .close-modal:focus{
+    background-color: aqua;
   }
