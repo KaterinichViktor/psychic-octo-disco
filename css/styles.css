@@ -269,6 +269,17 @@ p{
     position: absolute;
     top: 5px;
     right: 5px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    opacity: 0;
+  }
+  .account-edit:hover{
+    background-color: aquamarine;
+    opacity: 1;
+
   }
   .add-account{
     width: 250px;
