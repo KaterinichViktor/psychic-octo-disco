@@ -3,14 +3,30 @@
       openModalBtn: document.querySelector("[data-modal-account-open]"),
       closeModalBtn: document.querySelector("[data-modal-account-close]"),
       modal: document.querySelector("[data-modal-account]"),
+      modalWindow: document.querySelector("#modal-add-account"),
+      
+      // modalBank: document.querySelector("#modal-banc-sync"),
+      // modalManual: document.querySelector("#modal-manual-input")
     };
   
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
+    refs.openModalBtn.addEventListener("click", openModal);
+    refs.closeModalBtn.addEventListener("click", closeModal);
   
-    function toggleModal() {
-      refs.modal.classList.toggle("is-hidden");
+    function openModal() {
+      refs.modal.classList.remove("is-hidden");
+      // refs.modalBank.classList.add("bank-hidden");
+      // refs.modalManual.classList.add("manual-hidden");
     }
+    function closeModal() {
+      refs.modal.classList.add("is-hidden");
+    }
+    document.addEventListener("click", function(event) {
+      // Check if the click happened outside the dropdown menu
+      if (!refs.modalWindow.contains(event.target) && !refs.openModalBtn.contains(event.target)) {
+        refs.modal.classList.add("is-hidden");
+      }
+    });
 
     
   })();
+
