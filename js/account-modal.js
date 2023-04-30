@@ -20,7 +20,7 @@
     function closeModal() {
       refs.modal.classList.add("is-hidden");
     }
-    document.addEventListener("click", function(event) {
+    document.addEventListener("mousedown", function(event) {
       // Check if the click happened outside the dropdown menu
       if (!refs.modalWindow.contains(event.target) && !refs.openModalBtn.contains(event.target)) {
         refs.modal.classList.add("is-hidden");

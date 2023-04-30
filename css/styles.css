@@ -160,13 +160,110 @@ a{
     fill:  rgb(255, 255, 255);
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.modal-bank.bank-hidden,
+/* .modal-bank.bank-hidden,
 .modal-manual.manual-hidden,
 .modal-account.account-hidden{
   opacity: 0;
   pointer-events: none;
+} */
+
+
+.color-radio input[type="radio"] {
+  /* position: absolute; */
+  opacity: 0;
+  cursor: pointer;
 }
 
+.red-label {
+  background-color: red;
+}
+
+.green-label {
+  background-color: green;
+}
+
+.blue-label {
+  background-color: blue;
+}
+
+.color-radio label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.color-radio input[type="radio"]:checked + label {
+  border-color: #333;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  border: 1px solid rgba(204, 204, 204, 0.5);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 22px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -254,9 +351,9 @@ a{
   transform: translate(-50%, -50%) scale(1);
 
   width: 100%;
-  max-width: 940px;
+  max-width: 475px;
   height: 100%;
-  max-height: 350px;
+  max-height: 475px;
   background-color: var(--white);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -266,55 +363,91 @@ a{
 .account-add-select{
   padding: 15px 25px;
   border-bottom: 1px solid grey;
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
 }
-.account-add-select h3{
-  font-weight: 400;
-}
-.add-variants-select{
-  width: 100%;
-  height: 280px;
+.account-creation{
+  height: 415px;
+  padding: 30px ;
   display: flex;
-  padding: 25px 50px;
-  gap: 20px;
- 
+  flex-direction: column;
 }
-.add-variants-select li{
-  flex-basis: calc(100% / 3);
-  height: 230px;
-  
-}
-.add-variants-select li button{
+.form-field{
   width: 100%;
-  height: 100%;
-  border: none;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 2px 2px 30px 10px rgba(0,0,0,.1);
-  padding: 20px;
-  transition: box-shadow .1s ease-in;
-  cursor: pointer;
+  margin-top: 8px;
+  display: flex;
 }
-.variants-icon{
-  height: 60px;
-  width: 60px;
-  fill: rgb(1, 48, 255);
-}
-.add-variants-select li button h3{
-  font-weight: 500;
-  margin-top: 10px;
-}
-.add-variants-select li button p{
-  color: gray;
-  font-size: 14px;
-  margin-top: 15px;
+.short-account-add{
 
 }
-.add-variants-select li:hover button{
-  box-shadow: 2px 2px 30px 10px rgba(0,0,0,.25);
+.medium-account-add{
+
 }
+.long-account-add{
+  width: 100%;
+}
+
+.form-field input{
+  width: 280px;
+  height: 40px;
+}
+.color-btn,
+.currency-btn{
+  width: 110px;
+  height: 40px;
+  /* margin-left: 20px; */
+}
+.long-btn{
+width: 100%;
+height: 40px;
+}
+
+.color-btn,
+.currency-btn,
+.long-btn,
+.form-field input{
+  border-radius: 6px;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  padding: 7px;
+}
+.switch-slider-box{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.switch-slider-box p{
+  margin-left: 10px;
+  font-size: 16px;
+}
+.input-label{
+  font-size: 14px;
+  margin-top: 12px;
+}
+.button-save{
+  margin: auto;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  height: 35px;
+  background-color: rgb(71, 172, 71);
+  color: white;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-save:hover{
+  background-color: rgb(66, 194, 66);
+}
+
+
+
+
+
+
+
+
 .modal-account-close-icon{
   width: 15px;
   height: 15px;
@@ -326,8 +459,8 @@ a{
 }
 .close-modal-account{
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
 
   background-color: transparent;
   display: flex;

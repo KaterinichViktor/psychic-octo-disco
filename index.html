@@ -79,6 +79,15 @@
             <use href="./svg-sprite/symbol-defs.svg#icon-cross"></use>
           </svg>
         </button>
+        <form id="myForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+        
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          
+          <!-- Other form elements here -->
+        </form>
       </div>
     </div>
 
@@ -95,54 +104,85 @@
             ADD ACCOUNT
           </h3>
         </div>
-        <ul class="add-variants-select">
-        <li>
-          <button type="button" > 
-            <!-- data-modal-bank-open -->
-            <svg class="variants-icon">
-              <use href="./svg-sprite/symbol-defs.svg#icon-refresh"></use>
-            </svg>
-            <h3>Bank Sync</h3>
-            <p>Connect your bank accounts and synchronize your transactions automatically.</p>
-          </button>
-      </li>
-        <li>
-          <button type="button">
-            <svg class="variants-icon">
-              <use href="./svg-sprite/symbol-defs.svg#icon-document-add"></use>
-            </svg>
-            <h3>Imports</h3>
-            <p>Upload your transaction history by importing CSV, Excel, OFX or other files.</p>
-          </button>
-      </li>
-        <li>
-          <button type="button" >
-            <!-- data-modal-manual-open -->
-            <svg class="variants-icon">
-              <use href="./svg-sprite/symbol-defs.svg#icon-one-finger-double-tap"></use>
-            </svg>
-            <h3>Manual Input</h3>
-            <p>Update your account manually. You can connect your bank or import later.</p>
-          </button>
-        </li>
-        </ul>
-        <!-- Modal Bank Sync -->
-        <div class="modal-bank bank-hidden" id="modal-banc-sync" >
-          <button data-modal-bank-close class="close-modal-bank">
-            <svg class="modal-close-icon">
-              <use href="./svg-sprite/symbol-defs.svg#icon-cross"></use>
-            </svg>
-          </button>
-        </div>
-        <!-- Modal Manual Input -->
-        <div class="modal-manual manual-hidden" id="modal-manual-input" >
-          <button data-modal-manual-close class="close-modal-manual">
-            <svg class="modal-close-icon">
-              <use href="./svg-sprite/symbol-defs.svg#icon-cross"></use>
-            </svg>
-          </button>
-        </div>
+        <form class="account-creation">
+          
+          <div class="form-field">
+            <div class="medium-account-add">
+              <label for="name" class="input-label"> Name </label>
+              <input type="text" name="name" id="name" placeholder="Account Name" required />
+            </div>
+            <div class="short-account-add">
+              <label for="dropdown-color-btn" class="input-label"> Color </label>
+              <button type="button" id="dropdown-color-btn" class="color-btn">Color</button>
+            </div>
+          </div>
 
+          
+          <div class="form-field">
+            <div class="long-account-add">
+              <label for="account-select" class="input-label">Account Type</label>
+              <select id="account-type" class="long-btn">
+                <option>
+                  <div>
+                    <svg class="account-type-icon">
+                      <use href=""></use>
+                    </svg>
+                  </div>
+                  General
+                </option>
+                <option>
+                  <div>
+                    <svg class="account-type-icon">
+                      <use href=""></use>
+                    </svg>
+                  </div>
+                  Cash
+                </option>
+                <option>
+                  <div>
+                    <svg class="account-type-icon">
+                      <use href=""></use>
+                    </svg>
+                  </div>
+                  Credit
+                </option>
+              </select>
+            </div>
+            
+          </div>
+
+          
+          <div class="form-field">
+            <div class="medium-account-add">
+              <label for="start-sum" class="input-label"> Starting amount</label>
+              <input type="number" name="quantity" id="start-sum" min="0" value="0" >
+            </div>
+            <div class="short-account-add">
+              <label for="currency" class="input-label"> Currency</label>
+              <select id="currency" class="currency-btn">
+                <option>
+                  UAH
+                </option>
+              </select>
+            </div>
+            
+          </div>
+
+          <div class="switch-slider-box">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+            <p>Exclude from statistics 
+              <span>
+                <i class="fa fa-question" aria-hidden="true"></i>
+              </span>
+            </p>
+          </div>
+
+          <button type="submit" class="button-save">Save</button>
+        </form>
+        
       </div>
     </div>
 
@@ -279,7 +319,7 @@
     </section>
 
 
-    <section class="statistics-section">
+    <section class="statistics-section" style="display: flex; flex-direction: column; align-items: center;">
       <!-- <div class="container">
         <form>
           <input type="text" name="text" id="txt" placeholder="Text input"
@@ -290,6 +330,18 @@
           <ul class="list-test">
   
           </ul>
+        </div> -->
+
+        <!-- <label for="color-radio">Select color:</label>
+        <div class="color-radio">
+          <input type="radio" name="color" id="red" value="red">
+          <label for="red" class="red-label"></label>
+          
+          <input type="radio" name="color" id="green" value="green">
+          <label for="green" class="green-label"></label>
+          
+          <input type="radio" name="color" id="blue" value="blue">
+          <label for="blue" class="blue-label"></label>
         </div> -->
 
       </div>
@@ -305,17 +357,20 @@
           <li id="lastItem">Add</li>
         </ul>
       </div>
+
+
+
+
     </section>
 
 
     <script src="./js/dropdown.js"></script>
-
     <script src="./js/modal.js"></script>
 
-    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <!-- <script src="./js/test.js"></script> -->
     <script src="./js/test-gpt.js"></script>
     <script src="./js/account-modal.js"></script>
     <script src="./js/account-multi-toggle.js"></script>
+    <script src="./js/form-saves.js"></script>
   </body>
 </html>

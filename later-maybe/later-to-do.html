@@ -1,0 +1,63 @@
+<!-- Modal +Account -->
+<div class="backdrop-account is-hidden" data-modal-account>
+    <div class="modal-account" id="modal-add-account" >
+      <button data-modal-account-close class="close-modal-account">
+        <svg class="modal-account-close-icon">
+          <use href="./svg-sprite/symbol-defs.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <div class="account-add-select">
+        <h3>
+          ADD ACCOUNT
+        </h3>
+      </div>
+      <ul class="add-variants-select">
+      <li>
+        <button type="button" > 
+          <!-- data-modal-bank-open -->
+          <svg class="variants-icon">
+            <use href="./svg-sprite/symbol-defs.svg#icon-refresh"></use>
+          </svg>
+          <h3>Bank Sync</h3>
+          <p>Connect your bank accounts and synchronize your transactions automatically.</p>
+        </button>
+    </li>
+      <li>
+        <button type="button">
+          <svg class="variants-icon">
+            <use href="./svg-sprite/symbol-defs.svg#icon-document-add"></use>
+          </svg>
+          <h3>Imports</h3>
+          <p>Upload your transaction history by importing CSV, Excel, OFX or other files.</p>
+        </button>
+    </li>
+      <li>
+        <button type="button" >
+          <!-- data-modal-manual-open -->
+          <svg class="variants-icon">
+            <use href="./svg-sprite/symbol-defs.svg#icon-one-finger-double-tap"></use>
+          </svg>
+          <h3>Manual Input</h3>
+          <p>Update your account manually. You can connect your bank or import later.</p>
+        </button>
+      </li>
+      </ul>
+      <!-- Modal Bank Sync -->
+      <div class="modal-bank bank-hidden" id="modal-banc-sync" >
+        <button data-modal-bank-close class="close-modal-bank">
+          <svg class="modal-close-icon">
+            <use href="./svg-sprite/symbol-defs.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Modal Manual Input -->
+      <div class="modal-manual manual-hidden" id="modal-manual-input" >
+        <button data-modal-manual-close class="close-modal-manual">
+          <svg class="modal-close-icon">
+            <use href="./svg-sprite/symbol-defs.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
