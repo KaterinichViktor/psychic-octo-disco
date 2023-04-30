@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.ico" />
+
+    <title>Wallet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -15,7 +23,7 @@
     <header class="header">
       <div class="container">
         <nav class="header-navigation">
-          <a class="logo" href="./index.html"><svg class="svg-logo"><use href="./svg-sprite/symbol-defs.svg#icon-credit-card"></use></svg></a>
+          <a class="logo" href="./index.html"><svg class="svg-logo"><use href="./svg-sprite/symbol-defs.svg#icon-wallet"></use></svg></a>
 
           <ul class="header-list">
             <li>
@@ -63,82 +71,225 @@
       </div>
     </header>
 
+    <!-- Modal +Record -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="close-modal">
-          <!-- <svg class="modal-close-icon">
-            <use href="./images/icons.svg#icon-cross"></use>
-          </svg> -->
+          <svg class="modal-close-icon">
+            <use href="./svg-sprite/symbol-defs.svg#icon-cross"></use>
+          </svg>
         </button>
       </div>
     </div>
+
+    <!-- Modal +Account -->
+    <div class="backdrop-account is-hidden" data-modal-account>
+      <div class="modal-account">
+        <button data-modal-account-close class="close-modal-account">
+          X
+        </button>
+        <div class="account-add-select">
+          <h2>
+            ADD ACCOUNT
+          </h2>
+        </div>
+      <ul class="add-variants-select">
+        <li><button type="button">Sync</button></li>
+        <li><button type="button">Import</button></li>
+        <li><button type="button">Input</button></li>
+      </ul>
+
+      </div>
+    </div>
+
 
     <section class="accounts">
       <div class="container">
         <ul class="accounts-list">
           <li>
-            <div class="buttons-nest">
-              <button type="button" class="button-account"></button>
-              <button type="button" class="account-edit"></button>
-            </div>
+              <button type="button" class="button-account">
+                <svg class="icon-cash">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
+                </svg>
+                <span>
+                  <p class="cash">
+                    Cash
+                  </p>
+                  <h4 class="balance">
+                    UAH <span>222.0</span>
+                  </h4>
+                </span>
+              </button>
+              <button type="button" class="account-edit">
+                <svg class="icon-edit">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-pencil"></use>
+                </svg>
+              </button>
           </li>
           <li>
-            <button type="button" class="add-account">+ Add Account</button>
+              <button type="button" class="button-account">
+                <svg class="icon-cash">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
+                </svg>
+                <span>
+                  <p class="cash">
+                    Cash
+                  </p>
+                  <h4 class="balance">
+                    UAH <span>222.0</span>
+                  </h4>
+                </span>
+              </button>
+              <button type="button" class="account-edit">
+                <svg class="icon-edit">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-pencil"></use>
+                </svg>
+              </button>
+          </li>
+          <li>
+              <button type="button" class="button-account">
+                <svg class="icon-cash">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
+                </svg>
+                <span>
+                  <p class="cash">
+                    Cash
+                  </p>
+                  <h4 class="balance">
+                    UAH <span>222.0</span>
+                  </h4>
+                </span>
+              </button>
+              <button type="button" class="account-edit">
+                <svg class="icon-edit">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-pencil"></use>
+                </svg>
+              </button>
+          </li>
+          <li>
+              <button type="button" class="button-account">
+                <svg class="icon-cash">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
+                </svg>
+                <span>
+                  <p class="cash">
+                    Cash
+                  </p>
+                  <h4 class="balance">
+                    UAH <span>222.0</span>
+                  </h4>
+                </span>
+              </button>
+              <button type="button" class="account-edit">
+                <svg class="icon-edit">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-pencil"></use>
+                </svg>
+              </button>
+          </li>
+          <li>
+              <button type="button" class="button-account">
+                <svg class="icon-cash">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
+                </svg>
+                <span>
+                  <p class="cash">
+                    Cash
+                  </p>
+                  <h4 class="balance">
+                    UAH <span>222.0</span>
+                  </h4>
+                </span>
+              </button>
+              <button type="button" class="account-edit">
+                <svg class="icon-edit">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-pencil"></use>
+                </svg>
+              </button>
+          </li>
+          <li>
+              <button type="button" class="button-account">
+                <svg class="icon-cash">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
+                </svg>
+                <span>
+                  <p class="cash">
+                    Cash
+                  </p>
+                  <h4 class="balance">
+                    UAH <span>222.0</span>
+                  </h4>
+                </span>
+              </button>
+              <button type="button" class="account-edit">
+                <svg class="icon-edit">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-pencil"></use>
+                </svg>
+              </button>
+          </li>
+          <li id="lastItemBtn">
+            <button type="button" class="add-account" data-modal-account-open>+ Add Account</button>
           </li>
         </ul>
       </div>
 
-    </section class="statistics">
-    <section>
-      <div class="container">
+    </section>
 
+
+    <section class="statistics-section">
+      <!-- <div class="container">
+        <form>
+          <input type="text" name="text" id="txt" placeholder="Text input"
+          required>
+          <button type="submit" class="add-list-item">Save</button>
+        </form>
+        <div class="test-box">
+          <ul class="list-test">
+  
+          </ul>
+        </div> -->
+
+      </div>
+      <div class="container-23">
+        <form>
+          <input type="text" name="text" id="txt" placeholder="Text input"
+          required>
+          <button type="submit" class="btn-gpt-test"> test-gpt</button>
+        </form>
+        <ul id="myList">
+          <li>Default</li>
+          <li>
+            <button type="button" class="button-account">
+              <svg class="icon-cash">
+                <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
+              </svg>
+              <span>
+                <p class="cash">
+                  Cash
+                </p>
+                <h4 class="balance">
+                  UAH <span>222.0</span>
+                </h4>
+              </span>
+            </button>
+            <button type="button" class="account-edit">
+              <svg class="icon-edit">
+                <use href="./svg-sprite/symbol-defs.svg#icon-pencil"></use>
+              </svg>
+            </button>
+        </li>
+          <li id="lastItem">Button</li>
+        </ul>
       </div>
     </section>
 
 
-    <script>
-            // Get the button and dropdown menu
-      const button = document.getElementById("dropdown-btn");
-      const menu = document.getElementById("dropdown-menu");
+    <script src="./js/dropdown.js"></script>
 
-      // Add an event listener to the button to show the dropdown menu
-      button.addEventListener("click", function() {
-        menu.classList.toggle("show");
-      });
+    <script src="./js/modal.js"></script>
 
-      // Add an event listener to the document to hide the dropdown menu when clicked outside
-      document.addEventListener("click", function(event) {
-        // Check if the click happened outside the dropdown menu
-        if (!menu.contains(event.target) && !button.contains(event.target)) {
-          menu.classList.remove("show");
-        }
-      });
-    </script>
-
-    <script>
-      (() => {
-    const refs = {
-      openModalBtn: document.querySelector("[data-modal-open]"),
-      closeModalBtn: document.querySelector("[data-modal-close]"),
-      modal: document.querySelector("[data-modal]"),
-    };
-  
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
-  
-    function toggleModal() {
-      refs.modal.classList.toggle("is-hidden");
-    }
-
-    
-  })();
-
-      // document.addEventListener("click", function(event) {
-      //   // Check if the click happened outside the dropdown menu
-      //   if (!modal.contains(event.target) && !closeModalBtn.contains(event.target)) {
-      //     modal.classList.remove("is-hidden");
-      //   }
-      // });
-    </script>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- <script src="./js/test.js"></script> -->
+    <script src="./js/test-gpt.js"></script>
+    <script src="./js/account-modal.js"></script>
   </body>
 </html>
