@@ -1,0 +1,136 @@
+
+.profile-menu {
+    display: none;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background-color: var(--green);
+}
+
+.header .container{
+    display: flex;
+    align-items: center;
+}
+
+
+.header-navigation{
+    display: flex ;
+    align-content: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+.header-list{
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    color:  var(--white);
+    gap: 35px;
+}
+.header-list-item{
+    color: var(--white);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .header-list-item.current{
+    color: black;
+} */
+
+.header-list-item:hover{
+    color: black;
+}
+
+.profile-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+    position: relative;
+}
+.profile{
+    height: 40px;
+    width: 180px;
+    border-radius: 15px;
+    font-family:inherit;
+    font-size: 18px;
+    /* background-color: rgb(72, 72, 241); */
+    border: 0px;
+    /* color: white; */
+    cursor: pointer;
+}
+.profile:hover{
+    background-color: var(--accent);
+}
+
+.record{
+    height: 30px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: var(--primary-brand);
+    border: 0px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.record:hover{
+    background-color: var(--pressed-state);
+}
+
+.profile-menu.show{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    width: 180px;
+    height: 250px;
+    background-color: var(--white);
+    box-shadow: 0 2px 3px 0 #ccd2db;
+    z-index: 10;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    border-radius: 5px;
+}
+.profile-settings{
+    display: flex;
+    flex-direction: column;
+
+}
+.profile-settings-link{
+    display: flex;
+    align-items: center;
+    /* margin-left: 10px; */
+    color: black;
+    height: 100%;
+}
+.profile-settings-link:hover{
+    background-color: var(--accent);
+}
+.svg{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    fill:  var(--primary-brand);
+}
+.svg-logo{
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    fill:  rgb(255, 255, 255);
+}

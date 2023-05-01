@@ -1,0 +1,249 @@
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  border: 1px solid rgba(204, 204, 204, 0.5);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 22px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* !!!!!!!!!!!!!!!!!!!!!! */
+
+.modal-account{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 100%;
+  max-width: 475px;
+  height: 100%;
+  max-height: 475px;
+  background-color: var(--white);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.account-add-select{
+  padding: 15px 25px;
+  border-bottom: 1px solid grey;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.account-creation{
+  height: 415px;
+  padding: 30px ;
+  display: flex;
+  flex-direction: column;
+}
+.form-field{
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+}
+  
+#name::placeholder{
+  font-size: 16px;
+}
+#start-sum::-webkit-outer-spin-button,
+#start-sum::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#start-sum {
+  -moz-appearance: textfield;
+  font-size: 16px;
+}
+.account-type{
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  font-size: 16px;
+  }
+.account-type option{
+  height: 40px;
+  background-color: aqua;
+}
+
+/* .medium-account-add{
+width: 100%;
+}
+.medium-account-add input{
+  width: 100%;
+} */
+/* .long-account-add{
+  width: 100%;
+} */
+
+.form-field input{
+  width: 280px;
+  height: 40px;
+}
+.color-btn,
+.currency-btn{
+  width: 115px;
+  height: 40px;
+  margin-top: 8px;
+}
+.long-btn-type{
+  width: 100%;
+}
+
+.short-color-currency{
+  margin-left: 20px;
+}
+.name-sum{
+  margin-top: 8px;
+}
+.form-field:focus-within input,
+.account-type{
+  outline: none;
+  border-color: var(--primary-brand);
+}
+
+.color-btn,
+.currency-btn,
+.account-type,
+.form-field input{
+  border-radius: 6px;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  padding: 7px;
+}
+.switch-slider-box{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.switch-slider-box p{
+  margin-left: 10px;
+  font-size: 16px;
+}
+.input-label{
+  font-size: 14px;
+  margin-top: 12px;
+}
+.button-save{
+  margin: auto;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  height: 35px;
+  background-color: rgb(71, 172, 71);
+  color: white;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-save:hover{
+  background-color: rgb(66, 194, 66);
+}
+
+.modal-account-close-icon{
+  width: 15px;
+  height: 15px;
+  fill: inherit;
+}
+.close-modal-account:hover,
+.close-modal-account:focus{
+  fill: red;
+}
+.close-modal-account{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  /* border-radius: 50%; */
+  border: none;
+  cursor: pointer;
+  
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.color-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.red-label {
+  background-color: red;
+}
+
+.green-label {
+  background-color: green;
+}
+
+.blue-label {
+  background-color: blue;
+}
+
+.color-radio label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.color-radio input[type="radio"]:checked + label {
+  border-color: #333;
+}

@@ -1,0 +1,7 @@
+.statistics-section{
+    display: flex;
+    /* align-items: center; */
+
+    background-color: rgb(136, 238, 238);
+    height: 1000px;
+  }
