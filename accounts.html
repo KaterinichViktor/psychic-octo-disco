@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.ico" />
+
+    <title>Wallet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./accounts.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header-navigation">
+          <a class="logo" href="./index.html"
+            ><svg class="svg-logo">
+              <use href="./svg-sprite/symbol-defs.svg#icon-wallet"></use></svg></a>
+
+          <ul class="header-list">
+            <li>
+              <a class="header-list-item current" href="./index.html"
+                >Dashbourd</a>
+            </li>
+            <li>
+              <a class="header-list-item" href="">Accounts</a>
+            </li>
+            <li>
+              <a class="header-list-item" href="">Records</a>
+            </li>
+            <li>
+              <a class="header-list-item" href="">Analytics</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="profile-buttons">
+          <button type="button" class="record" data-modal-open>+ Record</button>
+          <button id="dropdown-btn" class="profile">Profile</button>
+
+          <div id="dropdown-menu" class="profile-menu">
+            <a href="#" class="profile-settings-link">
+              <svg class="svg">
+                <use href="./svg-sprite/symbol-defs.svg#icon-ticket"></use>
+              </svg>
+              <p>Add Voucher</p>
+            </a>
+            <a href="#" class="profile-settings-link">
+              <svg class="svg">
+                <use href="./svg-sprite/symbol-defs.svg#icon-star-full"></use>
+              </svg>
+              <p>Upgrade</p>
+            </a>
+            <a href="#" class="profile-settings-link">
+              <svg class="svg">
+                <use href="./svg-sprite/symbol-defs.svg#icon-equalizer"></use>
+              </svg>
+              <p>Settings</p>
+            </a>
+            <a href="#" class="profile-settings-link">
+              <svg class="svg">
+                <use href="./svg-sprite/symbol-defs.svg#icon-question"></use>
+              </svg>
+              <p>Help</p>
+            </a>
+            <a href="#" class="profile-settings-link">
+              <svg class="svg">
+                <use href="./svg-sprite/symbol-defs.svg#icon-enter"></use>
+              </svg>
+              <p>Log Out</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="container">
+        <div class="accounts-combined">
+            <button type="button">Sort</button>
+        
+        
+            <div class="accounts-side">
+                <h3>Accounts</h3>
+                <button>
+                    <button type="button" class="x-123" data-modal-account-open>+ Add</button>
+                </button>
+
+                <input type="text" id="search-input" placeholder="Search...">
+                <ul id="search-results"></ul>
+            </div>
+            <div class="accounts-main">
+                <ul id="list">
+                    <li>
+                    <button>apple</button>
+                    </li>
+                    <li>
+                    <button>banana</button>
+                    </li>
+                    <li>
+                    <button>gun</button>
+                    </li>
+                    <li>
+                        <button>1237</button>
+                    </li>
+                    <li>
+                        <button>k7u</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<script>
+const searchInput = document.querySelector('#search-input');
+const items = document.querySelectorAll('#list li');
+
+searchInput.addEventListener('input', () => {
+  const searchTerm = searchInput.value.toLowerCase();
+
+  items.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    const button = item.querySelector('button');
+    if (text.includes(searchTerm) || button.textContent.toLowerCase().includes(searchTerm)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});
+</script>
+  </body>
+</html>
