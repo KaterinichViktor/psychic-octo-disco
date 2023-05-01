@@ -378,15 +378,16 @@ input:checked + .slider:before {
   margin-top: 8px;
   display: flex;
 }
-.short-account-add{
 
+/* .medium-account-add{
+width: 100%;
 }
-.medium-account-add{
-
-}
-.long-account-add{
+.medium-account-add input{
   width: 100%;
-}
+} */
+/* .long-account-add{
+  width: 100%;
+} */
 
 .form-field input{
   width: 280px;
@@ -394,18 +395,33 @@ input:checked + .slider:before {
 }
 .color-btn,
 .currency-btn{
-  width: 110px;
+  width: 115px;
   height: 40px;
-  /* margin-left: 20px; */
+  margin-top: 8px;
 }
-.long-btn{
+.long-btn-type{
+  width: 100%;
+}
+.account-type{
 width: 100%;
 height: 40px;
+margin-top: 8px;
+}
+.short-color-currency{
+  margin-left: 20px;
+}
+.name-sum{
+  margin-top: 8px;
+}
+.form-field:focus-within input,
+.account-type{
+  outline: none;
+  border-color: var(--primary-brand);
 }
 
 .color-btn,
 .currency-btn,
-.long-btn,
+.account-type,
 .form-field input{
   border-radius: 6px;
   border: 1px solid rgba(204, 204, 204, 0.8);

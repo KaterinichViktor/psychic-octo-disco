@@ -21,8 +21,7 @@
       refs.modal.classList.add("is-hidden");
     }
     document.addEventListener("mousedown", function(event) {
-      // Check if the click happened outside the dropdown menu
-      if (!refs.modalWindow.contains(event.target) && !refs.openModalBtn.contains(event.target)) {
+      if (event.button === 0 && !refs.modalWindow.contains(event.target) && !refs.openModalBtn.contains(event.target)) {
         refs.modal.classList.add("is-hidden");
       }
     });
