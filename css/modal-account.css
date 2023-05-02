@@ -54,6 +54,20 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.exclude-stat-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid aqua;
+  margin-left: 5px;
+
+  width: 20px;
+  height: 20px;
+}
+
+
 /* !!!!!!!!!!!!!!!!!!!!!! */
 
 .modal-account{
@@ -128,8 +142,7 @@ width: 100%;
   width: 280px;
   height: 40px;
 }
-.color-btn,
-.currency-btn{
+.small-btn-account{
   width: 115px;
   height: 40px;
   margin-top: 8px;
@@ -149,19 +162,35 @@ width: 100%;
   outline: none;
   border-color: var(--primary-brand);
 }
-
-.color-btn,
-.currency-btn,
+/* !!!!!!!!!!!!!!REDO!!!!!!!!!!!!!! */
+.small-btn-account,
+.account-type,
+.form-field input{
+  border-radius: 6px;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+}
 .account-type,
 .form-field input{
   border-radius: 6px;
   border: 1px solid rgba(204, 204, 204, 0.8);
   padding: 7px;
 }
+.color-btn,
+.currency-btn{
+  width: 115px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+}
+
+
+
+
 .switch-slider-box{
   display: flex;
   align-items: center;
-  margin-top: 15px;
+  /* margin-top: 10px; */
 }
 .switch-slider-box p{
   margin-left: 10px;
@@ -171,22 +200,8 @@ width: 100%;
   font-size: 14px;
   margin-top: 12px;
 }
-.button-save{
-  margin: auto;
-  margin-bottom: 10px;
-  width: 100%;
-  border-radius: 10px;
-  border: none;
-  height: 35px;
-  background-color: rgb(71, 172, 71);
-  color: white;
-  cursor: pointer;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.button-save:hover{
-  background-color: rgb(66, 194, 66);
-}
+
 
 .modal-account-close-icon{
   width: 15px;

@@ -37,6 +37,7 @@
   .add-account:hover{
     border-color: var(--primary-brand);
     color: var(--primary-brand);
+
   }
 
   .button-account{
