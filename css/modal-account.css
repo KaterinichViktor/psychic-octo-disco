@@ -60,7 +60,7 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid aqua;
+  border: 1px solid blue;
   margin-left: 5px;
 
   width: 20px;
@@ -232,7 +232,7 @@ width: 100%;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-.color-radio input[type="radio"] {
+/* .color-radio input[type="radio"] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -261,4 +261,4 @@ width: 100%;
 
 .color-radio input[type="radio"]:checked + label {
   border-color: #333;
-}
+} */

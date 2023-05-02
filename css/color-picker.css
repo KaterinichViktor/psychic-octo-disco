@@ -1,0 +1,159 @@
+.color-picker{
+    display: none;
+}
+.color-picker.show{
+    display: block;
+    position: absolute;
+
+    z-index: 9;
+    top: 70px;
+    right: 0;
+    padding: 8px;
+    width: 340px;
+    /* height: 70px; */
+    border-radius: 6px;
+    border: 1px solid #bababc;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.box-3{
+    position: relative;
+    
+}
+.color-picker::before{
+    position: absolute;
+    top: -3px;
+    right: 20px;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: white;
+    transform: rotate(45deg);
+    z-index: 2;
+    box-shadow: -1px -1px 0 0 #bababc;
+    
+    
+
+}
+.radio-option{
+    width: 40px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-op{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.container-op input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.container-op:hover input ~ .checkmark {
+    scale: 1.1;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container-op input:checked ~ .checkmark:after {
+    display: block;
+}
+.container-op .checkmark:after {
+   top: 5px;
+   left: 5px;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   border: none;
+   background: white;
+}
+
+.op-blue-1{
+    background-color: #26c6da;
+}
+.op-blue-2{
+    background-color: #0097a7;
+}
+.op-blue-3{
+    background-color: #1565c0;
+}
+.op-blue-4{
+    background-color: #039be5;
+}
+
+
+.op-red-1{
+    background-color: #ff1744;
+}
+.op-red-2{
+    background-color: #ec407a;
+}
+.op-red-3{
+    background-color: #d32f2f;
+}
+.op-red-4{
+    background-color: #ad1457;
+}
+
+
+.op-purple-1{
+    background-color: #ab47bc;
+}
+.op-purple-2{
+    background-color: #ba68c8;
+}
+
+
+.op-green-1{
+    background-color: #00897b;
+}
+.op-green-2{
+    background-color: #43a047;
+}
+
+
+
+.op-gray-1{
+    background-color: #90a4ae;
+}
+.op-gray-2{
+    background-color: #607d8b;
+}
+
+
+.op-orange-1{
+    background-color: #ff6f00;
+}
+.op-orange-2{
+    background-color: #ffa000;
+}
