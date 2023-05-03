@@ -1,29 +1,26 @@
-
-const selectBtn = document.querySelector('.select-btn');
-const selectDropdown = document.querySelector('.select-dropdown');
+const selectBtn = document.getElementById('x-13');
+const selectDropdown = document.querySelector('.type-options-12');
 let selectedOption = '';
 
 selectBtn.addEventListener('click', () => {
-  selectDropdown.style.display = selectDropdown.style.display === 'none' ? 'block' : 'none';
+  selectDropdown.classList.toggle("show");
+  selectBtn.classList.toggle("show");
 });
+
 
 document.addEventListener('click', (event) => {
-  if (!event.target.closest('.select-dropdown') && event.target !== selectBtn) {
-    selectDropdown.style.display = 'none';
-  }
-});
-
-document.addEventListener('contextmenu', (event) => {
-  if (!event.target.closest('.select-dropdown') && event.target !== selectBtn) {
-    selectDropdown.style.display = 'none';
+  if (!event.target.closest('.type-options-12') && event.target !== selectBtn) {
+    selectDropdown.classList.remove("show");
+    selectBtn.classList.remove("show");
   }
 });
 
 selectDropdown.addEventListener('click', (event) => {
-  const button = event.target.closest('button');
+  const button = event.target.closest('li');
   if (button) {
-    selectedOption = button.innerText;
-    selectBtn.innerText = selectedOption;
-    selectDropdown.style.display = 'none';
+    selectedOption = button.innerHTML;
+    selectBtn.innerHTML = selectedOption;
+    selectDropdown.classList.remove("show");
+    selectBtn.classList.remove("show");
   }
 });

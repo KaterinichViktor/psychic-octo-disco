@@ -6,6 +6,7 @@
 @import url(statisticks.css);
 @import url(accounts-page-2.css);
 @import url(color-picker.css);
+@import url(type-picker.css);
 
 @import url(simulation.css);
 
@@ -57,7 +58,7 @@ form input{
 
 .caret-dropdown{
   position: absolute;
-  top: 10px;
+  top: 0;
   right: 20px;
 }
 

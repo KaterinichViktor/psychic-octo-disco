@@ -32,9 +32,6 @@
     transform: rotate(45deg);
     z-index: 2;
     box-shadow: -1px -1px 0 0 #bababc;
-    
-    
-
 }
 .radio-option{
     width: 40px;
@@ -97,6 +94,50 @@
    border: none;
    background: white;
 }
+
+/* small buttons carret-down */
+#color-example{
+    width: 70%;
+    height: 90%;
+    border-radius: 4px;
+}
+
+#currency-id{
+    width: 70%;
+    height: 90%;
+    border-radius: 4px;
+}
+#currency-id{
+    font-weight: 100;
+    font-family: inherit;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-end;
+}
+
+#x-11{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#x-22{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#caret-down{
+    align-self: center;
+    margin-left: 13%;
+}
+
+#caret-down-long{
+    position: absolute;
+    right: 3.5%;
+    top: 18px;
+    z-index: 3;
+}
+
+
 
 .op-blue-1{
     background-color: #26c6da;

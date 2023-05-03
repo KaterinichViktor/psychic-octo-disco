@@ -1,86 +1,100 @@
 .xxx{
-    width: 475px;
-    height: 475px;
-    background-color: var(--white);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-  }
+  width: 475px;
+  height: 475px;
+  background-color: var(--white);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
 
-  .type-88{
-    padding: 45px 45px 45px 45px;
-    height: calc(100% - 60px);
-  }
-  .type-88,
-  .box-2,
-  .box-3,
-  .box-4{
-    display: flex;
-    flex-direction: column;
-  }
-  .box-1,
-  .box-4{
-    height: 60px;
-    margin-bottom: 14px;
-  }
-  .box-1{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .box-2{
-    width: 70%;
-  }
-  .box-3{
-    width: 25%;
-  }
-  .box-1 button,
-  .box-4 button{
-    background-color: transparent;
-    text-align: start;
-  }
-  .box-1 label,
-  .box-4 label{
-    font-size: 16px;
-  }
-  .box-1 input,
-  .box-1 button,
-  .box-4 button{
-    margin-top: 5px;
-    height: 40px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    padding: 6px;
-  }
-  .box-1 input:focus-within,
-  .box-1 button:focus-within,
-  .box-4 button:focus-within{
-    outline: none;
-    border-color: var(--primary-brand);
-  }
-  
-  
+.type-88{
+  padding: 45px 45px 45px 45px;
+  height: calc(100% - 60px);
+}
+.input-tag{
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.type-88,
+.box-2,
+.box-3,
+.box-4{
+  display: flex;
+  flex-direction: column;
+}
+.box-1,
+.box-4{
+  height: 60px;
+  margin-bottom: 14px;
+}
+.box-1{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.box-2{
+  width: 70%;
+}
+.box-3{
+  width: 25%;
+}
+.box-1 button,
+.type-btn-x-13{
+  background-color: transparent;
+  text-align: start;
+  cursor: pointer;
+}
 
-  .box-4{
-    width: 100%;
-  }
+.box-1 input,
+.box-1 button,
+.type-btn-x-13{
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  width: 100%;
+}
+.box-1 input:focus-within,
+.box-1 button:focus-within{
+  outline: none;
+  border-color: var(--primary-brand);
+}
+/* .type-btn-x-13:focus-within{
+  outline: none;
+  border-color: var(--primary-brand);
+  border-bottom: none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+} */
 
-  .button-save{
-    display: block;
-    margin-top: 46px;
-    width: 100%;
-    border-radius: 10px;
-    border: none;
-    height: 35px;
-    background-color: rgb(71, 172, 71);
-    color: white;
-    cursor: pointer;
-  
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .button-save:hover{
-    background-color: rgb(66, 194, 66);
-  }
+.type-btn-x-13.show{
+border-color: var(--primary-brand);
+border-bottom: none;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+}
+
+
+.box-4{
+  width: 100%;
+}
+
+.button-save{
+  display: block;
+  margin-top: 48px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  height: 35px;
+  background-color: rgb(71, 172, 71);
+  color: white;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-save:hover{
+  background-color: rgb(66, 194, 66);
+}
 
 
 
