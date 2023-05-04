@@ -7,7 +7,10 @@
     <link rel="icon" type="image/svg+xml" href="./favicon.ico" />
 
     <title>Wallet</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,17 +27,22 @@
     <link rel="stylesheet" href="./accounts.css" />
   </head>
   <body>
+
     <header class="header">
+
       <div class="container">
         <nav class="header-navigation">
-          <a class="logo" href="./index.html"
-            ><svg class="svg-logo">
-              <use href="./svg-sprite/symbol-defs.svg#icon-wallet"></use></svg></a>
+          <a class="logo" href="./index.html">
+            <svg class="svg-logo">
+              <use href="./svg-sprite/symbol-defs.svg#icon-wallet"></use>
+            </svg>
+          </a>
 
           <ul class="header-list">
             <li>
               <a class="header-list-item current" href="./index.html"
-                >Dashbourd</a>
+                >Dashbourd</a
+              >
             </li>
             <li>
               <a class="header-list-item" href="">Accounts</a>
@@ -87,60 +95,65 @@
       </div>
     </header>
 
+    <section class="accounts-test">
 
-    <div class="container">
+      <div class="container">
+        <button type="button" class="page-2-sort">Sort</button>
 
-        <button type="button">Sort</button>
-        
         <div class="accounts-combined">
-            <div class="accounts-side">
-                <h3>Accounts</h3>
-                <button>
-                    <button type="button" class="x-123" data-modal-account-open>+ Add</button>
-                </button>
+          <div class="accounts-side">
+            <h3>Accounts</h3>
+              <button type="button" class="x-123" data-modal-account-open>
+                + Add
+              </button>
 
-                <input type="text" id="search-input" placeholder="Search...">
-                <ul id="search-results"></ul>
-            </div>
-            <div class="accounts-main">
-                <ul id="list">
-                    <li>
-                    <button>apple</button>
-                    </li>
-                    <li>
-                    <button>banana</button>
-                    </li>
-                    <li>
-                    <button>gun</button>
-                    </li>
-                    <li>
-                        <button>1237</button>
-                    </li>
-                    <li>
-                        <button>k7u</button>
-                    </li>
-                </ul>
-            </div>
+
+            <input type="text" id="search-input" placeholder="Search..." />
+            <ul id="search-results"></ul>
+          </div>
+          <div class="accounts-main">
+            <ul id="list">
+              <li>
+                <button>apple</button>
+              </li>
+              <li>
+                <button>banana</button>
+              </li>
+              <li>
+                <button>gun</button>
+              </li>
+              <li>
+                <button>1237</button>
+              </li>
+              <li>
+                <button>k7u</button>
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-<script>
-const searchInput = document.querySelector('#search-input');
-const items = document.querySelectorAll('#list li');
+    <script>
+      const searchInput = document.querySelector("#search-input");
+      const items = document.querySelectorAll("#list li");
 
-searchInput.addEventListener('input', () => {
-  const searchTerm = searchInput.value.toLowerCase();
+      searchInput.addEventListener("input", () => {
+        const searchTerm = searchInput.value.toLowerCase();
 
-  items.forEach(item => {
-    const text = item.textContent.toLowerCase();
-    const button = item.querySelector('button');
-    if (text.includes(searchTerm) || button.textContent.toLowerCase().includes(searchTerm)) {
-      item.style.display = 'block';
-    } else {
-      item.style.display = 'none';
-    }
-  });
-});
-</script>
+        items.forEach((item) => {
+          const text = item.textContent.toLowerCase();
+          const button = item.querySelector("button");
+          if (
+            text.includes(searchTerm) ||
+            button.textContent.toLowerCase().includes(searchTerm)
+          ) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    </script>
   </body>
 </html>

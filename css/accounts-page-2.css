@@ -1,4 +1,18 @@
 
+.accounts-test .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-2-sort{
+  width: 80px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.x-123{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .accounts-side{
     width: 80%;
     display: flex;
@@ -7,13 +21,11 @@
 
     width: 300px;
     height: 60vh;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
 }
 .accounts-main{
-    margin-top: 100px;
     margin-left: 20px;
     width: 100%;
 }
@@ -34,4 +46,5 @@
 
   .accounts-combined{
     display: flex;
+    width: 100%;
   }

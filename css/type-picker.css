@@ -108,3 +108,24 @@
 .currency-options-3 ul li:hover{
   background-color: #cccccc7e;  
 }
+
+
+.type-acc-icon{
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.type-icon-box{
+  background-color: #ccc;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+}
