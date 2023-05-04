@@ -129,3 +129,13 @@
   align-items: center;
   justify-content: center; */
 }
+
+.currency-select-box{
+  position: relative;
+}
+#caret-down-short{
+  position: absolute;
+  right: 15%;
+  top: 18px;
+  z-index: 3;
+}
