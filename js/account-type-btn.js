@@ -2,11 +2,15 @@ const selectBtn = document.getElementById('x-13');
 const selectDropdown = document.querySelector('.type-options-12');
 let selectedOption = '';
 
+// Set the selected option to the first option
+const firstOption = selectDropdown.querySelector('li');
+selectedOption = firstOption.innerHTML;
+selectBtn.innerHTML = selectedOption;
+
 selectBtn.addEventListener('click', () => {
   selectDropdown.classList.toggle("show");
   selectBtn.classList.toggle("show");
 });
-
 
 document.addEventListener('click', (event) => {
   if (!event.target.closest('.type-options-12') && event.target !== selectBtn) {

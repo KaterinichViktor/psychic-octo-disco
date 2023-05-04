@@ -26,6 +26,13 @@
   height: 60px;
   margin-bottom: 14px;
 }
+.box-1 input,
+.box-4 input{
+  padding: 6px 6px 6px 10px;
+
+}.box-1 input::placeholder{
+  font-size: 16px;
+}
 .box-1{
   display: flex;
   flex-direction: row;
@@ -45,7 +52,18 @@
   cursor: pointer;
 }
 
-.box-1 input,
+.box-1 input:hover,
+.box-1 button:hover,
+.type-btn-x-13:hover{
+  border-color: var(--primary-brand);
+}
+.box-1 input{
+  height: 36px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
 .box-1 button,
 .type-btn-x-13{
   height: 36px;
