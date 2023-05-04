@@ -139,3 +139,6 @@
   top: 18px;
   z-index: 3;
 }
+.info-pop-up{
+  fill: var(--primary-brand);
+}

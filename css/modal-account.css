@@ -60,7 +60,7 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid var(--primary-brand);
+
   margin-left: 5px;
 
   width: 20px;
