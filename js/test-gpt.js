@@ -17,3 +17,28 @@ myButton.addEventListener("click", (e)=>{
 // aproved
 // 
 // 
+{/* <li>
+
+      <button type="button" class="button-account">
+
+        <svg class="icon-cash">
+          <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
+        </svg>
+
+        <span>
+          <p class="cash">Cash</p>
+          <h4 class="balance">UAH <span>222.0</span></h4>
+        </span>
+
+      </button>
+
+
+      <button type="button" class="account-edit">
+
+        <svg class="icon-edit">
+          <use href="./svg-sprite/symbol-defs.svg#icon-pencil"></use>
+        </svg>
+
+      </button>
+
+    </li> */}

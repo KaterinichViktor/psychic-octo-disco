@@ -162,7 +162,9 @@ width: 100%;
   outline: none;
   border-color: var(--primary-brand);
 }
-/* !!!!!!!!!!!!!!REDO!!!!!!!!!!!!!! */
+
+
+/* !!!!!!!!!!!!!!REDO!!!!!!!!!!!!!!
 .small-btn-account,
 .account-type,
 .form-field input{
@@ -182,7 +184,7 @@ width: 100%;
   background-color: transparent;
   border: none;
   border-radius: 6px;
-}
+} */
 
 
 
@@ -230,35 +232,3 @@ width: 100%;
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* .color-radio input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.red-label {
-  background-color: red;
-}
-
-.green-label {
-  background-color: green;
-}
-
-.blue-label {
-  background-color: blue;
-}
-
-.color-radio label {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-}
-
-.color-radio input[type="radio"]:checked + label {
-  border-color: #333;
-} */

@@ -1,15 +1,15 @@
-const selectBtnCurrency = document.getElementById('x-22');
+const selectBtnCurrency = document.querySelector('.currency-btn-x-22');
 const selectDropdownCurrency = document.querySelector('.currency-options-3');
 let selectedCurrencyOption = '';
 
-selectBtnCurrency.addEventListener('click', () => {
+selectBtnCurrency.addEventListener('click', (event) => {
+  event.stopPropagation()
   selectDropdownCurrency.classList.toggle("show");
   selectBtnCurrency.classList.toggle("show");
 });
 
-
 document.addEventListener('click', (event) => {
-  if (!event.target.closest('.currency-options-3') && event.target !== selectBtn) {
+  if (!event.target.closest('.currency-options-3') && event.target !== selectBtnCurrency) {
     selectDropdownCurrency.classList.remove("show");
     selectBtnCurrency.classList.remove("show");
   }
@@ -24,6 +24,14 @@ selectDropdownCurrency.addEventListener('click', (event) => {
     selectBtnCurrency.classList.remove("show");
   }
 });
+
+
+
+
+
+
+
+
 
 // const selectBtn = document.getElementById('x-22');
 // const selectDropdown = document.querySelector('.currency-options-3');
