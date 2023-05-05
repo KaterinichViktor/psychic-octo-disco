@@ -8,7 +8,7 @@ const currencyBtn = document.getElementById("x-22");
 const colorExample = document.getElementById("color-example");
 
 const radioButtonsChecker = document.querySelectorAll('input[name="color"]');
-let selectedColorChecker = "";
+let selectedColorChecker = colorExample.style.backgroundColor;
 
 radioButtonsChecker.forEach(button => {
     button.addEventListener('change', () => {
@@ -17,7 +17,7 @@ radioButtonsChecker.forEach(button => {
 });
 
 const dropdownType = document.querySelector('.type-options-12 ul');
-let selectedType = "";
+let selectedType = typeBtn.textContent;
 
 dropdownType.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', () => {
@@ -30,7 +30,7 @@ dropdownType.querySelectorAll('li').forEach(item => {
 const inputStartAmount = document.getElementById("number-66");
 
 const dropdownCurrency = document.querySelector('.currency-options-3 ul');
-let selectedCurrency = "";
+let selectedCurrency = currencyBtn.textContent;
 
 dropdownCurrency.querySelectorAll('li').forEach(item => {
     item.addEventListener('click', () => {
@@ -40,17 +40,17 @@ dropdownCurrency.querySelectorAll('li').forEach(item => {
 
 function createLi(selectedColorChecker, selectedType, selectedCurrency, inputName, inputStartAmount) {
     const li = document.createElement('li');
-    li.style.backgroundColor = colorExample.style.backgroundColor;
+    li.style.backgroundColor = selectedColorChecker;
     const buttonCommon = document.createElement('button');
     buttonCommon.classList.add('button-account');
     const spanIcon = document.createElement('span');
     spanIcon.classList.add('account-icon');
 
-    if (typeBtn.textContent === 'General') {
-        spanIcon.innerHTML = '<svg class="icon-account-type"><use href="./svg-sprite/symbol-defs.svg#icon-wallet-2"></use></svg>';
-    } else if (typeBtn.textContent === 'Cash') {
+    if (selectedType === 'General') {
+        spanIcon.innerHTML = '<svg class="icon-account-type"<use href="./svg-sprite/symbol-defs.svg#icon-wallet-2"></use></svg>';
+    } else if (selectedType === 'Cash') {
         spanIcon.innerHTML = '<svg class="icon-account-type"><use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use></svg>';
-    } else if (typeBtn.textContent === 'Credit Card') {
+    } else if (selectedType === 'Credit Card') {
         spanIcon.innerHTML = '<svg class="icon-account-type"><use href="./svg-sprite/symbol-defs.svg#icon-credit-card"></use></svg>';
     }
 
@@ -62,7 +62,7 @@ function createLi(selectedColorChecker, selectedType, selectedCurrency, inputNam
     const currencyBalance = document.createElement('h4');
     currencyBalance.classList.add('balance');
     const currency = document.createElement('span');
-    currency.textContent = currencyBtn.textContent + " ";
+    currency.textContent = selectedCurrency + " ";
     const balance = document.createElement('span');
     balance.textContent = inputStartAmount.value;
     const buttonEdit = document.createElement('button');
