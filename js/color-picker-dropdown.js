@@ -75,13 +75,6 @@ radioButtons.forEach(button => {
   });
 });
 
-// // Add an event listener to the form submit event to save the selected color to localStorage
-// form.addEventListener("submit", function(event) {
-//   event.preventDefault();
-//   localStorage.setItem("selectedColor", selectedColor);
-//   alert("Color choice saved to localStorage!");
-// });
-
 // Add an event listener to the document to hide the dropdown menu when clicked outside
 document.addEventListener("click", function(event) {
   // Check if the click happened outside the dropdown menu

@@ -6,6 +6,7 @@ let selectedCurrencyOption = '';
 selectedCurrencyOption = selectDropdownCurrency.querySelector('li').textContent;
 selectBtnCurrency.textContent = selectedCurrencyOption;
 
+
 selectBtnCurrency.addEventListener('click', (event) => {
   event.stopPropagation()
   selectDropdownCurrency.classList.toggle("show");

@@ -337,7 +337,7 @@
                 </div>
                 <div class="type-options-12">
                   <ul>
-                    <li>
+                    <li value="General">
                       <span class="type-icon-box">
                         <svg class="type-acc-icon">
                           <use href="./svg-sprite/symbol-defs.svg#icon-wallet-2"></use>
@@ -345,7 +345,7 @@
                       </span>
                       General
                     </li>
-                    <li>
+                    <li value="Cash">
                       <span class="type-icon-box">
                         <svg class="type-acc-icon">
                           <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
@@ -353,7 +353,7 @@
                       </span>
                       Cash
                     </li>
-                    <li>
+                    <li value="Credit Card">
                       <span class="type-icon-box">
                         <svg class="type-acc-icon">
                           <use href="./svg-sprite/symbol-defs.svg#icon-credit-card"></use>
@@ -382,14 +382,15 @@
                   </div>
                   <div class="currency-options-3">
                     <ul>
-                      <li>UAH</li>
-                      <li>USD</li>
-                      <li>EUR</li>
+                      <li value="UAH ">UAH</li>
+                      <li value="USD ">USD</li>
+                      <li value="EUR ">EUR</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="box-5">
               <div class="switch-slider-box">
                 <label class="switch">
@@ -417,12 +418,14 @@
         <ul class="accounts-list">
           <li>
             <button type="button" class="button-account">
-              <svg class="icon-cash">
-                <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
-              </svg>
+              <span class="account-icon">
+                <svg class="icon-account-type">
+                  <use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use>
+                </svg>
+              </span>
               <span>
-                <p class="cash">Cash</p>
-                <h4 class="balance">UAH <span>222.0</span></h4>
+                <p class="name-custom">Cash</p>
+                <h4 class="balance"><span>UAH </span><span>222.0</span></h4>
               </span>
             </button>
             <button type="button" class="account-edit">
@@ -466,6 +469,9 @@
       </div>
     </section>
 
+
+    
+
     <script src="./js/color-picker-dropdown.js"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/modal.js"></script>
@@ -473,9 +479,12 @@
     <script src="./js/account-modal.js"></script>
     <script src="./js/account-multi-toggle.js"></script>
     <script src="./js/form-saves.js"></script>
+    
 
     <script src="./js/account-type-btn.js"></script>
     <script src="./js/currency-btn.js"></script>
+
+    <script src="./complex-li-creation.js"></script>
 
     <script src="https://kit.fontawesome.com/55ae9dab90.js" crossorigin="anonymous"></script>
   </body>
