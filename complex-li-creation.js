@@ -201,6 +201,9 @@ const formCreation = document.querySelector(".type-88");
 const inputName  = document.getElementById("name-99");
 const accountsList = document.querySelector(".accounts-list");
 const lastItem = document.getElementById("lastItemBtn");
+const typeBtn = document.getElementById("x-13");
+const currencyBtn = document.getElementById("x-22");
+const colorExample = document.getElementById("color-example");
 
 const radioButtonsChecker = document.querySelectorAll('input[name="color"]');
 let selectedColorChecker = "";
@@ -245,16 +248,17 @@ dropdownCurrency.querySelectorAll('li').forEach(item => {
 
 function createLi(selectedColorChecker, selectedType, selectedCurrency, inputName, inputStartAmount) {
     const li = document.createElement('li');
-    li.style.backgroundColor = selectedColorChecker;
+    li.style.backgroundColor = colorExample.style.backgroundColor;
     const buttonCommon = document.createElement('button');
     buttonCommon.classList.add('button-account');
     const spanIcon = document.createElement('span');
+    spanIcon.classList.add('account-icon');
 
-    if (selectedType === 'General') {
+    if (typeBtn.textContent === 'General') {
         spanIcon.innerHTML = '<svg class="icon-account-type"><use href="./svg-sprite/symbol-defs.svg#icon-wallet-2"></use></svg>';
-    } else if (selectedType === 'Cash') {
+    } else if (typeBtn.textContent === 'Cash') {
         spanIcon.innerHTML = '<svg class="icon-account-type"><use href="./svg-sprite/symbol-defs.svg#icon-dollar"></use></svg>';
-    } else if (selectedType === 'Credit Card') {
+    } else if (typeBtn.textContent === 'Credit Card') {
         spanIcon.innerHTML = '<svg class="icon-account-type"><use href="./svg-sprite/symbol-defs.svg#icon-credit-card"></use></svg>';
     }
 
@@ -268,7 +272,7 @@ function createLi(selectedColorChecker, selectedType, selectedCurrency, inputNam
     // const currencyText = document.createTextNode(selectedCurrency);
     // currency.appendChild(currencyText);
     const currency = document.createElement('span');
-    currency.textContent = selectedCurrency + " ";
+    currency.textContent = currencyBtn.textContent + " ";
     const balance = document.createElement('span');
     balance.textContent = inputStartAmount.value;
     const buttonEdit = document.createElement('button');
